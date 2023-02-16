@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "noImplicitAny": false,
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "hoc/lesson.js",
+    "hoc/lesson.js",
+    "context/actions/auth.js",
+    "context/actions/types.js",
+    "context/initialStates/auth.js",
+    "context/reducers/auth.js",
+    "context/Provider.js",
+    "components/maps/peer.js",
+    "pages/index.js",
+    "components/Navbar.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
