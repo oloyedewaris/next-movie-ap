@@ -5,14 +5,26 @@ import axios from "axios";
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
+  const [loaded, setLoaded] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    axios
-      .get(`https://www.omdbapi.com/?i=tt0848228&apikey=cadc1a65&s=Avengers&page=1`)
-      .then(res => setMovies(res.data.Search))
-      .catch(error => console.log(error))
+    loadMovies()
   }, [])
 
+  const loadMovies = () => {
+    setLoading(true)
+    axios
+      .get(`https://www.omdbapi.com/?i=tt0848228&apikey=cadc1a65&s=Avengers&page=1`)
+      .then(res => {
+        setLoading(false)
+        setLoaded(true)
+        setMovies(res.data.Search)
+      })
+      .catch(error => {
+        setLoading(false)
+      })
+  }
 
   return (
     <VStack py={8} w="100%">
@@ -21,7 +33,7 @@ const Home = () => {
           <MovieCard movie={movie} />
         ))}
       </SimpleGrid>
-      <Button bg='#7b51ba' mx='auto' size='md'>Load More</Button>
+      {loaded && <Button bg='#7b51ba' mx='auto' size='md'>Load More</Button>}
     </VStack>
   )
 }
