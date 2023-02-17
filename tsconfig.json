@@ -33,7 +33,8 @@
     "context/Provider.js",
     "components/maps/peer.js",
     "pages/index.js",
-    "components/Navbar.js"
+    "components/Navbar.js",
+    "utils/theme.js"
   ],
   "exclude": [
     "node_modules"

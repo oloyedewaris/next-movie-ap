@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { SimpleGrid, VStack } from "@chakra-ui/react"
+import { SimpleGrid, VStack, Button } from "@chakra-ui/react"
 import MovieCard from '../components/MovieCard';
 import axios from "axios";
 
@@ -21,6 +21,7 @@ const Home = () => {
           <MovieCard movie={movie} />
         ))}
       </SimpleGrid>
+      <Button bg='#7b51ba' mx='auto' size='md'>Load More</Button>
     </VStack>
   )
 }

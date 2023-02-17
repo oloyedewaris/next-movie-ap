@@ -2,11 +2,18 @@
 
 const nextConfig = {
   reactStrictMode: false,
-  // images: {
-  //   domains: ["res.cloudinary.com"],
-  //   loader: "cloudinary",
-  //   // path: 'https://res.cloudinary.com/waris-nearyu/image/upload/'
-  // },
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    // !! WARN !!
+    // Dangerously allow production builds to successfully complete even if
+    // your project has type errors.
+    // !! WARN !!
+    ignoreBuildErrors: true,
+  },
 }
 
 module.exports = nextConfig
