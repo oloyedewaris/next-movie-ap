@@ -32,7 +32,7 @@
     "context/reducers/auth.js",
     "context/Provider.js",
     "components/maps/peer.js",
-    "pages/index.js",
+    "pages/index.ts",
     "components/Navbar.js",
     "utils/theme.js"
   ],
